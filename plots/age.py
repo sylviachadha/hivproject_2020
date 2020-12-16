@@ -85,3 +85,4 @@ def get_age_count_json():
     data = json.dumps(json_dict)
 
     return data
+

@@ -18,6 +18,7 @@ def get_status_count_recent():  # Extract Data from Microsoft SQL Server
     conn.close()
     return d
 
+ans = get_status_count_recent()
 
 def get_status_count_json1():  # Python Transformations for Data Format
     df_recent = get_status_count_recent()

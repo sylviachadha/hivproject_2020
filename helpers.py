@@ -3,7 +3,7 @@ import pymssql
 
 def get_db_connection():  # DB Connection
     #server = "192.168.43.177"
-    server =  "192.168.68.110"   #myhome# virtual box IP
+    server =  "192.168.68.107"   #myhome# virtual box IP
     database = 'master'
     username = 'SA'
     password = 'Root@sql'

@@ -13,6 +13,8 @@ from plots.new_hiv_cases import get_hiv_count_json
 from plots.partnerhiv import get_phiv_count_json
 from plots.site import get_site_count_json
 from plots.status import get_status_count_json
+from plots.td_gender import get_gcount_json
+from plots.td_new_hiv_cases import get_RLcount_json
 
 
 class GetHandler(BaseHTTPRequestHandler):
@@ -55,6 +57,14 @@ class GetHandler(BaseHTTPRequestHandler):
 
         elif self.path == "/python-partnerHiv":
             response = get_phiv_count_json()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+
+        elif self.path == "/python-trend-overview":
+            response = get_RLcount_json()
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+
+        elif self.path == "/python-trend-gender":
+            response = get_gcount_json()
             self.wfile.write(json.dumps(response).encode('utf-8'))
 
 
